@@ -1,0 +1,109 @@
+/* css general */
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+    background-color: rgb(238, 165, 20);
+}
+/* vista mobile */
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .gridContainer {
+    display: grid;
+    grid-template-areas:
+      "header header" "navIzq navDer" "parrafo parrafo"
+      "img img" "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 70px auto 1fr 100px;
+    background-color: bisque;
+   
+   
+    
+  }
+  body{
+    background-color: blanchedalmond;
+  }
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+  }
+  div.navIzq {
+    grid-area: navIzq;
+  }
+  .navIzq ul,
+  .navDer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  li {
+    padding: 10px;
+    list-style-type: none;
+  }
+  div.navDer {
+    grid-area: navDer;
+  }
+  section.parrafo {
+    grid-area: parrafo;
+  }
+  .imagenhabitacion img{
+    grid-area: img;
+    width: 150px;
+    height: 150px;;
+    background-image: url("../imagenes/habitacion.jpg");
+    color: antiquewhite;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+ 
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+}
+
+* vista desktop */ @media only screen and (min-width: 768px) {
+  .gridContainer {
+    display: grid;
+    grid-template-areas: "navIzq navIzq header header navDer navDer" "parrafo parrafo parrafo img img img" "footer footer footer footer footer footer";
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-rows: 100px auto 200px;}
+  }
+  header {
+    grid-area: header;
+    text-align: center;
+  }
+  div.navIzq {
+    grid-area: navIzq;
+  }
+  .navIzq ul,
+  .navDer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  li {
+    padding: 10px;
+    list-style-type: none;
+    position: relative;
+    top: 20px;
+  }
+  div.navDer {
+    grid-area: navDer;
+  }
+  section.parrafo {
+    grid-area: parrafo;
+  }
+  section.imgenhabitacion {
+    grid-area: img;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(142, 35, 35);
+  }
+
